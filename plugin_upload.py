@@ -10,6 +10,15 @@ import getpass
 import xmlrpc.client
 from optparse import OptionParser
 
+# Add your plugin directory to the Python path
+plugin_dir = os.path.dirname(os.path.abspath(__file__))
+if plugin_dir not in sys.path:
+    sys.path.insert(0, plugin_dir)
+
+import xmlrpc.client
+import defusedxml.xmlrpc
+defusedxml.xmlrpc.monkey_patch()
+
 standard_library.install_aliases()
 
 # Configuration

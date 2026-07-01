@@ -22,9 +22,6 @@
   <layout class="QGridLayout" name="gridLayout_117">
    <item row="0" column="0">
     <widget class="QScrollArea" name="scrollArea">
-     <property name="styleSheet">
-      <string/>
-     </property>
      <property name="widgetResizable">
       <bool>true</bool>
      </property>
@@ -33,8 +30,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>983</width>
-        <height>1036</height>
+        <width>978</width>
+        <height>990</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -45,9 +42,6 @@
            <width>800</width>
            <height>0</height>
           </size>
-         </property>
-         <property name="styleSheet">
-          <string/>
          </property>
          <property name="currentIndex">
           <number>0</number>
@@ -64,14 +58,11 @@
                <pointsize>28</pointsize>
               </font>
              </property>
-             <property name="styleSheet">
-              <string/>
-             </property>
              <property name="text">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Welcome to Geodata to ENVI-met&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
              <property name="alignment">
-              <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
              </property>
             </widget>
            </item>
@@ -79,9 +70,6 @@
             <widget class="QLabel" name="label_48">
              <property name="autoFillBackground">
               <bool>false</bool>
-             </property>
-             <property name="styleSheet">
-              <string/>
              </property>
              <property name="text">
               <string/>
@@ -93,7 +81,7 @@
               <bool>false</bool>
              </property>
              <property name="alignment">
-              <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
+              <set>Qt::AlignHCenter|Qt::AlignTop</set>
              </property>
             </widget>
            </item>
@@ -106,43 +94,45 @@
               <string notr="true"/>
              </property>
              <property name="frameShape">
-              <enum>QFrame::Shape::NoFrame</enum>
+              <enum>QFrame::NoFrame</enum>
              </property>
              <property name="html">
               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;What does this plugin do?&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; color:#ffffff;&quot;&gt;This plugin allows you to prepare, run and evaluate ENVI-met simulations and simulation results in QGIS.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; color:#ffffff;&quot;&gt;It has three main purposes:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; color:#ffffff;&quot;&gt;1. The plugin allows you to convert GIS data to ENVI-met model area input files.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; color:#ffffff;&quot;&gt;2. Within the plugin you can define the ENVI-met simulation settings and directly start the simulation, without leaving QGIS.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; color:#ffffff;&quot;&gt;3. The plugin enables you to directly load and compare ENVI-met simulation results (*.EDT, *.nc) in QGIS.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI','sans-serif'; font-size:12pt; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; color:#ffffff;&quot;&gt;Additionally, you can lookup your ENVI-met Database in the plugin to find your defined soils, trees, etc.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI','sans-serif'; font-size:12pt; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;What is ENVI-met?&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; color:#ffffff;&quot;&gt;ENVI-met is a three-dimensional microclimate model. It simulates the climatological interactions between surfaces, plants, and the atmosphere. In addition to generating microclimate calculations accurate down to a square-meter, ENVI-met also analyses the effects of planning measures on the urban climate.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; color:#ffffff;&quot;&gt;The simulations are carried out in a horizontal resolution of just a few meters and a time frame usually between 24 hours and a few days.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI','sans-serif'; font-size:12pt; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;Where can I find more information?&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; color:#ffffff;&quot;&gt;You can find a documentation of the plugin &lt;/span&gt;&lt;a href=&quot;https://envi-met.info/doku.php?id=apps:gis4envi-met&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; text-decoration: underline; color:#3498db;&quot;&gt;here&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; color:#ffffff;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; color:#ffffff;&quot;&gt;For more information about the microclimate model, visit &lt;/span&gt;&lt;a href=&quot;https://www.envi-met.com/&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; text-decoration: underline; color:#3498db;&quot;&gt;www.envi-met.com&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; color:#ffffff;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI','sans-serif'; font-size:12pt; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;Do I need to have ENVI-met installed to use this plugin?&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; color:#ffffff;&quot;&gt;No, that is not necessary. If ENVI-met is not installed locally, you will however not be able to use the Database Lookup function and the Start ENVI-met simulation function.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI','sans-serif'; font-size:12pt; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; font-weight:600; color:#ffffff;&quot;&gt;How do I need to prepare my data for using this plugin?&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; text-decoration: underline; color:#ffffff;&quot;&gt;Prerequisits:&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; font-style:italic; color:#ffffff;&quot;&gt;All layers should be projected in the same map projection system (preferably UTM)&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; font-style:italic; color:#ffffff;&quot;&gt;Layers should hold fields with ENVI-met database IDs where necessary&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; font-style:italic; color:#ffffff;&quot;&gt;Vertical extend of the model area should be roughly twice the height of the highest structures (DEM+ Buildings)&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; font-style:italic; color:#ffffff;&quot;&gt;Lateral boundary should be clear of stuctures roughly half the height of the adjacent buildings (see Additional Gridding options)&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; color:#ffffff;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot; font-family:'Segoe UI','sans-serif'; font-size:12pt; font-style:italic; color:#ffffff;&quot;&gt;The total vertical height of the model area should not exceed 2500 meters&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;What does this plugin do?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;This plugin allows you to prepare, run and evaluate ENVI-met simulations and simulation results in QGIS. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;It has three main purposes:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;1. The plugin allows you to convert GIS data to ENVI-met model area input files.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;2. Within the plugin you can define the ENVI-met simulation settings and directly start the simulation, without leaving QGIS.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;3. The plugin enables you to directly load and compare ENVI-met simulation results (*.EDT, *.nc) in QGIS.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Additionally, you can lookup your ENVI-met Database in the plugin to find your defined soils, trees, etc.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;What is ENVI-met?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;ENVI-met is a three-dimensional microclimate model. It simulates the climatological interactions between surfaces, plants, and the atmosphere. In addition to generating microclimate calculations accurate down to a square-meter, ENVI-met also analyses the effects of planning measures on the urban climate.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;The simulations are carried out in a horizontal resolution of just a few meters and a time frame usually between 24 hours and a few days.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Where can I find more information?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;You can find a documentation of the plugin &lt;/span&gt;&lt;a href=&quot;https://envi-met.info/doku.php?id=apps:gis4envi-met&quot;&gt;&lt;span style=&quot; font-size:12pt; text-decoration: underline; color:#0000ff;&quot;&gt;here&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;For more information about the microclimate model, visit &lt;/span&gt;&lt;a href=&quot;https://www.envi-met.com/&quot;&gt;&lt;span style=&quot; font-size:12pt; text-decoration: underline; color:#0000ff;&quot;&gt;www.envi-met.com&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Do I need to have ENVI-met installed to use this plugin?&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;No, that is not necessary. If ENVI-met is not installed locally, you will however not be able to use the Database Lookup function and the Start ENVI-met simulation function.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;How do I need to prepare my data for using this plugin?&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; text-decoration: underline;&quot;&gt;Prerequisits:&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; text-decoration: underline;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;All layers should be projected in the same map projection system (preferably UTM)&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-style:italic;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Layers should hold fields with ENVI-met database IDs where necessary&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-style:italic;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Vertical extend of the model area should be roughly twice the height of  the highest structures (DEM+ Buildings)&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-style:italic;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Lateral boundary should be clear of stuctures roughly half the height of the adjacent buildings (see Additional Gridding options)&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-style:italic;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;The total vertical height of the model area should not exceed 2500 meters&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
              <property name="openExternalLinks">
               <bool>true</bool>
@@ -174,7 +164,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
               <item row="0" column="0">
                <widget class="QTabWidget" name="le_bBPS">
                 <property name="layoutDirection">
-                 <enum>Qt::LayoutDirection::LeftToRight</enum>
+                 <enum>Qt::LeftToRight</enum>
                 </property>
                 <property name="currentIndex">
                  <number>0</number>
@@ -206,10 +196,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       <item row="3" column="1" rowspan="2" colspan="3">
                        <widget class="QFrame" name="frm_vertExt">
                         <property name="frameShape">
-                         <enum>QFrame::Shape::StyledPanel</enum>
+                         <enum>QFrame::StyledPanel</enum>
                         </property>
                         <property name="frameShadow">
-                         <enum>QFrame::Shadow::Raised</enum>
+                         <enum>QFrame::Raised</enum>
                         </property>
                         <layout class="QGridLayout" name="gridLayout_13">
                          <item row="14" column="0" colspan="4">
@@ -222,6 +212,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                            </property>
                            <property name="font">
                             <font>
+                             <weight>75</weight>
                              <bold>true</bold>
                             </font>
                            </property>
@@ -229,7 +220,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             <string>Resulting model height: ? meters</string>
                            </property>
                            <property name="alignment">
-                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                            <set>Qt::AlignCenter</set>
                            </property>
                           </widget>
                          </item>
@@ -365,7 +356,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             <string>Highest Structure (DEM + Building): ? m</string>
                            </property>
                            <property name="alignment">
-                            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+                            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                            </property>
                           </widget>
                          </item>
@@ -415,7 +406,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                          <string>2: Adjust the horizontal resolution of the model area:</string>
                         </property>
                         <property name="alignment">
-                         <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                         </property>
                         <property name="wordWrap">
                          <bool>true</bool>
@@ -434,7 +425,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                          <string>3: Determine the vertical resolution and gridding option of the model area:</string>
                         </property>
                         <property name="alignment">
-                         <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                         </property>
                         <property name="wordWrap">
                          <bool>true</bool>
@@ -450,10 +441,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
                          </sizepolicy>
                         </property>
                         <property name="frameShape">
-                         <enum>QFrame::Shape::StyledPanel</enum>
+                         <enum>QFrame::StyledPanel</enum>
                         </property>
                         <property name="frameShadow">
-                         <enum>QFrame::Shadow::Raised</enum>
+                         <enum>QFrame::Raised</enum>
                         </property>
                         <layout class="QGridLayout" name="gridLayout_12">
                          <item row="2" column="0">
@@ -549,7 +540,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                          <string>1: Select sub area from layer (should only contain one rectangular polygon):</string>
                         </property>
                         <property name="alignment">
-                         <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                         </property>
                         <property name="wordWrap">
                          <bool>true</bool>
@@ -677,7 +668,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="1" column="0">
                    <spacer name="verticalSpacer_21">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Vertical</enum>
+                     <enum>Qt::Vertical</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -697,10 +688,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="0" column="3">
                    <spacer name="horizontalSpacer_10">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Horizontal</enum>
+                     <enum>Qt::Horizontal</enum>
                     </property>
                     <property name="sizeType">
-                     <enum>QSizePolicy::Policy::Expanding</enum>
+                     <enum>QSizePolicy::Expanding</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -818,7 +809,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       <item row="2" column="1">
                        <spacer name="verticalSpacer_2">
                         <property name="orientation">
-                         <enum>Qt::Orientation::Vertical</enum>
+                         <enum>Qt::Vertical</enum>
                         </property>
                         <property name="sizeHint" stdset="0">
                          <size>
@@ -838,7 +829,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       <item row="5" column="1">
                        <spacer name="verticalSpacer_3">
                         <property name="orientation">
-                         <enum>Qt::Orientation::Vertical</enum>
+                         <enum>Qt::Vertical</enum>
                         </property>
                         <property name="sizeHint" stdset="0">
                          <size>
@@ -848,7 +839,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                         </property>
                        </spacer>
                       </item>
-                      <item row="2" column="5" alignment="Qt::AlignmentFlag::AlignRight">
+                      <item row="2" column="5" alignment="Qt::AlignRight">
                        <widget class="QLineEdit" name="le_bRoof">
                         <property name="minimumSize">
                          <size>
@@ -868,7 +859,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                         </property>
                        </widget>
                       </item>
-                      <item row="1" column="5" alignment="Qt::AlignmentFlag::AlignRight">
+                      <item row="1" column="5" alignment="Qt::AlignRight">
                        <widget class="QLineEdit" name="le_bWall">
                         <property name="sizePolicy">
                          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -901,7 +892,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                         </property>
                        </widget>
                       </item>
-                      <item row="3" column="5" alignment="Qt::AlignmentFlag::AlignRight">
+                      <item row="3" column="5" alignment="Qt::AlignRight">
                        <widget class="QLineEdit" name="le_bGreenWall">
                         <property name="sizePolicy">
                          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -924,7 +915,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                         </property>
                        </widget>
                       </item>
-                      <item row="4" column="5" alignment="Qt::AlignmentFlag::AlignRight">
+                      <item row="4" column="5" alignment="Qt::AlignRight">
                        <widget class="QLineEdit" name="le_bGreenRoof">
                         <property name="minimumSize">
                          <size>
@@ -1038,13 +1029,13 @@ li.checked::marker { content: &quot;\2612&quot;; }
                         </property>
                        </widget>
                       </item>
-                      <item row="0" column="3" alignment="Qt::AlignmentFlag::AlignRight">
+                      <item row="0" column="3" alignment="Qt::AlignRight">
                        <widget class="QLineEdit" name="le_bName"/>
                       </item>
                       <item row="2" column="1">
                        <spacer name="verticalSpacer_4">
                         <property name="orientation">
-                         <enum>Qt::Orientation::Vertical</enum>
+                         <enum>Qt::Vertical</enum>
                         </property>
                         <property name="sizeHint" stdset="0">
                          <size>
@@ -1057,7 +1048,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       <item row="0" column="2">
                        <widget class="QCheckBox" name="chk_bName">
                         <property name="layoutDirection">
-                         <enum>Qt::LayoutDirection::LeftToRight</enum>
+                         <enum>Qt::LeftToRight</enum>
                         </property>
                         <property name="text">
                          <string>Use static value instead:</string>
@@ -1186,7 +1177,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       <item row="3" column="1">
                        <spacer name="horizontalSpacer_18">
                         <property name="orientation">
-                         <enum>Qt::Orientation::Horizontal</enum>
+                         <enum>Qt::Horizontal</enum>
                         </property>
                         <property name="sizeHint" stdset="0">
                          <size>
@@ -1281,15 +1272,12 @@ li.checked::marker { content: &quot;\2612&quot;; }
                        <widget class="QTextEdit" name="te_defineRasterVals">
                         <property name="html">
                          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;0 -&amp;gt; 0200SL&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;1 -&amp;gt; 0200ST&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;Other -&amp;gt; 0200PP&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;0 -&amp;gt; 0200SL&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1 -&amp;gt; 0200ST&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Other -&amp;gt; 0200PP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                         </property>
                        </widget>
                       </item>
@@ -1337,7 +1325,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="2" column="0">
                    <spacer name="verticalSpacer_22">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Vertical</enum>
+                     <enum>Qt::Vertical</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -1379,7 +1367,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                          <item row="0" column="0">
                           <layout class="QHBoxLayout" name="horizontalLayout_2">
                            <property name="sizeConstraint">
-                            <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+                            <enum>QLayout::SetDefaultConstraint</enum>
                            </property>
                            <item>
                             <widget class="QRadioButton" name="rb_simplePlantsVector">
@@ -1485,7 +1473,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                           <item row="4" column="1">
                            <spacer name="verticalSpacer_10">
                             <property name="orientation">
-                             <enum>Qt::Orientation::Vertical</enum>
+                             <enum>Qt::Vertical</enum>
                             </property>
                             <property name="sizeHint" stdset="0">
                              <size>
@@ -1530,15 +1518,12 @@ li.checked::marker { content: &quot;\2612&quot;; }
                            <widget class="QTextEdit" name="te_defineRasterValsSP">
                             <property name="html">
                              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;0 -&amp;gt; 0200H2&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;1 -&amp;gt; 0200H4&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;&gt;Other -&amp;gt; 0200XX&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;0 -&amp;gt; 0200H2&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1 -&amp;gt; 0200H4&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Other -&amp;gt; 0200XX&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                             </property>
                            </widget>
                           </item>
@@ -1637,7 +1622,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       <item row="5" column="0" colspan="2">
                        <spacer name="horizontalSpacer_3">
                         <property name="orientation">
-                         <enum>Qt::Orientation::Horizontal</enum>
+                         <enum>Qt::Horizontal</enum>
                         </property>
                         <property name="sizeHint" stdset="0">
                          <size>
@@ -1657,6 +1642,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                         </property>
                         <property name="font">
                          <font>
+                          <weight>50</weight>
                           <italic>false</italic>
                           <bold>false</bold>
                           <underline>false</underline>
@@ -1819,7 +1805,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="2" column="2" colspan="4">
                    <spacer name="horizontalSpacer_2">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Horizontal</enum>
+                     <enum>Qt::Horizontal</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -1839,7 +1825,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="7" column="0" colspan="6">
                    <widget class="Line" name="line_2">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Horizontal</enum>
+                     <enum>Qt::Horizontal</enum>
                     </property>
                    </widget>
                   </item>
@@ -1953,7 +1939,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="3" column="0" colspan="6">
                    <widget class="Line" name="line">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Horizontal</enum>
+                     <enum>Qt::Horizontal</enum>
                     </property>
                    </widget>
                   </item>
@@ -1970,7 +1956,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="6" column="2">
                    <spacer name="verticalSpacer_7">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Vertical</enum>
+                     <enum>Qt::Vertical</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -1983,7 +1969,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="2" column="2">
                    <spacer name="verticalSpacer_6">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Vertical</enum>
+                     <enum>Qt::Vertical</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -1996,7 +1982,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="10" column="2">
                    <spacer name="verticalSpacer_23">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Vertical</enum>
+                     <enum>Qt::Vertical</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -2033,7 +2019,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="2" column="0" colspan="3">
                    <spacer name="horizontalSpacer">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Horizontal</enum>
+                     <enum>Qt::Horizontal</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -2116,7 +2102,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                    </sizepolicy>
                   </property>
                   <property name="layoutDirection">
-                   <enum>Qt::LayoutDirection::RightToLeft</enum>
+                   <enum>Qt::RightToLeft</enum>
                   </property>
                   <property name="text">
                    <string>Gridding:</string>
@@ -2138,7 +2124,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                    </sizepolicy>
                   </property>
                   <property name="layoutDirection">
-                   <enum>Qt::LayoutDirection::RightToLeft</enum>
+                   <enum>Qt::RightToLeft</enum>
                   </property>
                   <property name="text">
                    <string>Buildings:</string>
@@ -2157,7 +2143,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                    </sizepolicy>
                   </property>
                   <property name="layoutDirection">
-                   <enum>Qt::LayoutDirection::RightToLeft</enum>
+                   <enum>Qt::RightToLeft</enum>
                   </property>
                   <property name="text">
                    <string>Surfaces:</string>
@@ -2176,7 +2162,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                    </sizepolicy>
                   </property>
                   <property name="layoutDirection">
-                   <enum>Qt::LayoutDirection::RightToLeft</enum>
+                   <enum>Qt::RightToLeft</enum>
                   </property>
                   <property name="text">
                    <string>DEM:</string>
@@ -2199,7 +2185,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                    </sizepolicy>
                   </property>
                   <property name="layoutDirection">
-                   <enum>Qt::LayoutDirection::RightToLeft</enum>
+                   <enum>Qt::RightToLeft</enum>
                   </property>
                   <property name="text">
                    <string>Simple Plants:</string>
@@ -2218,7 +2204,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                    </sizepolicy>
                   </property>
                   <property name="layoutDirection">
-                   <enum>Qt::LayoutDirection::RightToLeft</enum>
+                   <enum>Qt::RightToLeft</enum>
                   </property>
                   <property name="text">
                    <string>3D-Plants:</string>
@@ -2237,7 +2223,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                    </sizepolicy>
                   </property>
                   <property name="layoutDirection">
-                   <enum>Qt::LayoutDirection::RightToLeft</enum>
+                   <enum>Qt::RightToLeft</enum>
                   </property>
                   <property name="text">
                    <string>Receptors: </string>
@@ -2260,7 +2246,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                    </sizepolicy>
                   </property>
                   <property name="layoutDirection">
-                   <enum>Qt::LayoutDirection::RightToLeft</enum>
+                   <enum>Qt::RightToLeft</enum>
                   </property>
                   <property name="text">
                    <string>Point-Sources:</string>
@@ -2279,7 +2265,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                    </sizepolicy>
                   </property>
                   <property name="layoutDirection">
-                   <enum>Qt::LayoutDirection::RightToLeft</enum>
+                   <enum>Qt::RightToLeft</enum>
                   </property>
                   <property name="text">
                    <string>Line-Sources:</string>
@@ -2298,7 +2284,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                    </sizepolicy>
                   </property>
                   <property name="layoutDirection">
-                   <enum>Qt::LayoutDirection::RightToLeft</enum>
+                   <enum>Qt::RightToLeft</enum>
                   </property>
                   <property name="text">
                    <string>Area-Sources:</string>
@@ -2374,7 +2360,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
            <item>
             <spacer name="verticalSpacer_20">
              <property name="orientation">
-              <enum>Qt::Orientation::Vertical</enum>
+              <enum>Qt::Vertical</enum>
              </property>
              <property name="sizeHint" stdset="0">
               <size>
@@ -2424,7 +2410,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                        </sizepolicy>
                       </property>
                       <property name="layoutDirection">
-                       <enum>Qt::LayoutDirection::RightToLeft</enum>
+                       <enum>Qt::RightToLeft</enum>
                       </property>
                       <property name="text">
                        <string>Output Settings</string>
@@ -2440,7 +2426,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                        </sizepolicy>
                       </property>
                       <property name="layoutDirection">
-                       <enum>Qt::LayoutDirection::RightToLeft</enum>
+                       <enum>Qt::RightToLeft</enum>
                       </property>
                       <property name="text">
                        <string>Pollutant Settings</string>
@@ -2456,7 +2442,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                        </sizepolicy>
                       </property>
                       <property name="layoutDirection">
-                       <enum>Qt::LayoutDirection::RightToLeft</enum>
+                       <enum>Qt::RightToLeft</enum>
                       </property>
                       <property name="text">
                        <string>Expert Settings</string>
@@ -2476,7 +2462,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                        </sizepolicy>
                       </property>
                       <property name="layoutDirection">
-                       <enum>Qt::LayoutDirection::RightToLeft</enum>
+                       <enum>Qt::RightToLeft</enum>
                       </property>
                       <property name="text">
                        <string>Soil Settings</string>
@@ -2492,7 +2478,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                        </sizepolicy>
                       </property>
                       <property name="layoutDirection">
-                       <enum>Qt::LayoutDirection::RightToLeft</enum>
+                       <enum>Qt::RightToLeft</enum>
                       </property>
                       <property name="text">
                        <string>Radiation Settings</string>
@@ -2508,7 +2494,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                        </sizepolicy>
                       </property>
                       <property name="layoutDirection">
-                       <enum>Qt::LayoutDirection::RightToLeft</enum>
+                       <enum>Qt::RightToLeft</enum>
                       </property>
                       <property name="text">
                        <string>Building Settings</string>
@@ -2520,7 +2506,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="1" column="2">
                    <spacer name="horizontalSpacer_20">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Horizontal</enum>
+                     <enum>Qt::Horizontal</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -2604,7 +2590,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="2" column="0">
                    <spacer name="horizontalSpacer_17">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Horizontal</enum>
+                     <enum>Qt::Horizontal</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -2699,7 +2685,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                      <bool>false</bool>
                     </property>
                     <property name="layoutDirection">
-                     <enum>Qt::LayoutDirection::RightToLeft</enum>
+                     <enum>Qt::RightToLeft</enum>
                     </property>
                     <property name="text">
                      <string>Meteorology</string>
@@ -2715,7 +2701,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                      <bool>false</bool>
                     </property>
                     <property name="layoutDirection">
-                     <enum>Qt::LayoutDirection::RightToLeft</enum>
+                     <enum>Qt::RightToLeft</enum>
                     </property>
                     <property name="text">
                      <string>General Settings</string>
@@ -2728,7 +2714,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="0" column="3">
                    <spacer name="horizontalSpacer_5">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Horizontal</enum>
+                     <enum>Qt::Horizontal</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -2783,7 +2769,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                <item row="2" column="0">
                 <spacer name="horizontalSpacer_19">
                  <property name="orientation">
-                  <enum>Qt::Orientation::Horizontal</enum>
+                  <enum>Qt::Horizontal</enum>
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
@@ -2803,7 +2789,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                <item row="7" column="0">
                 <spacer name="horizontalSpacer_6">
                  <property name="orientation">
-                  <enum>Qt::Orientation::Horizontal</enum>
+                  <enum>Qt::Horizontal</enum>
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
@@ -2816,7 +2802,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                <item row="8" column="0">
                 <spacer name="verticalSpacer_19">
                  <property name="orientation">
-                  <enum>Qt::Orientation::Vertical</enum>
+                  <enum>Qt::Vertical</enum>
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
@@ -2977,7 +2963,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                     </property>
                     <property name="dateTime">
                      <datetime>
-                      <hour>3</hour>
+                      <hour>5</hour>
                       <minute>0</minute>
                       <second>0</second>
                       <year>2000</year>
@@ -2991,6 +2977,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                    <widget class="QCalendarWidget" name="calendar_startDateSim">
                     <property name="font">
                      <font>
+                      <weight>50</weight>
                       <italic>false</italic>
                       <bold>false</bold>
                       <strikeout>false</strikeout>
@@ -3001,14 +2988,14 @@ li.checked::marker { content: &quot;\2612&quot;; }
                      <locale language="English" country="Germany"/>
                     </property>
                     <property name="horizontalHeaderFormat">
-                     <enum>QCalendarWidget::HorizontalHeaderFormat::ShortDayNames</enum>
+                     <enum>QCalendarWidget::ShortDayNames</enum>
                     </property>
                    </widget>
                   </item>
                   <item row="6" column="1">
                    <spacer name="horizontalSpacer_4">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Horizontal</enum>
+                     <enum>Qt::Horizontal</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -3069,7 +3056,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                <item row="3" column="0">
                 <spacer name="horizontalSpacer_24">
                  <property name="orientation">
-                  <enum>Qt::Orientation::Horizontal</enum>
+                  <enum>Qt::Horizontal</enum>
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
@@ -3082,7 +3069,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                <item row="5" column="0">
                 <spacer name="verticalSpacer_18">
                  <property name="orientation">
-                  <enum>Qt::Orientation::Vertical</enum>
+                  <enum>Qt::Vertical</enum>
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
@@ -3316,7 +3303,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                    <item row="2" column="0">
                     <spacer name="verticalSpacer_17">
                      <property name="orientation">
-                      <enum>Qt::Orientation::Vertical</enum>
+                      <enum>Qt::Vertical</enum>
                      </property>
                      <property name="sizeHint" stdset="0">
                       <size>
@@ -3348,7 +3335,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                          <item row="10" column="0" colspan="2">
                           <spacer name="horizontalSpacer_25">
                            <property name="orientation">
-                            <enum>Qt::Orientation::Horizontal</enum>
+                            <enum>Qt::Horizontal</enum>
                            </property>
                            <property name="sizeHint" stdset="0">
                             <size>
@@ -3406,7 +3393,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             <number>28</number>
                            </property>
                            <property name="orientation">
-                            <enum>Qt::Orientation::Horizontal</enum>
+                            <enum>Qt::Horizontal</enum>
                            </property>
                           </widget>
                          </item>
@@ -3420,7 +3407,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                          <item row="6" column="0">
                           <widget class="QLabel" name="lb_timeMaxHum">
                            <property name="frameShape">
-                            <enum>QFrame::Shape::NoFrame</enum>
+                            <enum>QFrame::NoFrame</enum>
                            </property>
                            <property name="text">
                             <string>Time of max. rel. Humidity:</string>
@@ -3439,7 +3426,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             <number>17</number>
                            </property>
                            <property name="orientation">
-                            <enum>Qt::Orientation::Horizontal</enum>
+                            <enum>Qt::Horizontal</enum>
                            </property>
                           </widget>
                          </item>
@@ -3500,7 +3487,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             <number>75</number>
                            </property>
                            <property name="orientation">
-                            <enum>Qt::Orientation::Horizontal</enum>
+                            <enum>Qt::Horizontal</enum>
                            </property>
                           </widget>
                          </item>
@@ -3513,7 +3500,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             <number>45</number>
                            </property>
                            <property name="orientation">
-                            <enum>Qt::Orientation::Horizontal</enum>
+                            <enum>Qt::Horizontal</enum>
                            </property>
                           </widget>
                          </item>
@@ -3527,7 +3514,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                          <item row="11" column="1">
                           <spacer name="verticalSpacer_5">
                            <property name="orientation">
-                            <enum>Qt::Orientation::Vertical</enum>
+                            <enum>Qt::Vertical</enum>
                            </property>
                            <property name="sizeHint" stdset="0">
                             <size>
@@ -3589,13 +3576,13 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             <locale language="English" country="UnitedStates"/>
                            </property>
                            <property name="verticalScrollBarPolicy">
-                            <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+                            <enum>Qt::ScrollBarAlwaysOff</enum>
                            </property>
                            <property name="horizontalScrollBarPolicy">
-                            <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+                            <enum>Qt::ScrollBarAlwaysOff</enum>
                            </property>
                            <property name="sizeAdjustPolicy">
-                            <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustToContentsOnFirstShow</enum>
+                            <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
                            </property>
                            <property name="tabKeyNavigation">
                             <bool>true</bool>
@@ -3646,6 +3633,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             <property name="font">
                              <font>
                               <pointsize>9</pointsize>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3657,6 +3645,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             <property name="font">
                              <font>
                               <pointsize>9</pointsize>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3668,6 +3657,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             <property name="font">
                              <font>
                               <pointsize>9</pointsize>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3678,6 +3668,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3688,6 +3679,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3698,6 +3690,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3708,6 +3701,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3718,6 +3712,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3728,6 +3723,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3738,6 +3734,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3748,6 +3745,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3758,6 +3756,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3768,6 +3767,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3778,6 +3778,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3788,6 +3789,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3798,6 +3800,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3808,6 +3811,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3818,6 +3822,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3828,6 +3833,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3838,6 +3844,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3848,6 +3855,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3858,6 +3866,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3868,6 +3877,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3878,6 +3888,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3889,6 +3900,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             <property name="font">
                              <font>
                               <pointsize>8</pointsize>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -3899,6 +3911,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                             </property>
                             <property name="font">
                              <font>
+                              <weight>75</weight>
                               <bold>true</bold>
                              </font>
                             </property>
@@ -4174,7 +4187,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       <item row="0" column="0">
                        <widget class="QStackedWidget" name="stackedWidget_7">
                         <property name="frameShape">
-                         <enum>QFrame::Shape::NoFrame</enum>
+                         <enum>QFrame::NoFrame</enum>
                         </property>
                         <property name="currentIndex">
                          <number>1</number>
@@ -4239,7 +4252,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                    <item row="11" column="1">
                     <spacer name="verticalSpacer_16">
                      <property name="orientation">
-                      <enum>Qt::Orientation::Vertical</enum>
+                      <enum>Qt::Vertical</enum>
                      </property>
                      <property name="sizeHint" stdset="0">
                       <size>
@@ -4288,7 +4301,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       <item row="0" column="0">
                        <widget class="QStackedWidget" name="stackedWidget_4">
                         <property name="frameShape">
-                         <enum>QFrame::Shape::NoFrame</enum>
+                         <enum>QFrame::NoFrame</enum>
                         </property>
                         <property name="currentIndex">
                          <number>0</number>
@@ -4427,7 +4440,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       <item row="0" column="0">
                        <widget class="QStackedWidget" name="stackedWidget_5">
                         <property name="frameShape">
-                         <enum>QFrame::Shape::NoFrame</enum>
+                         <enum>QFrame::NoFrame</enum>
                         </property>
                         <property name="currentIndex">
                          <number>1</number>
@@ -4500,7 +4513,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       <item row="0" column="0">
                        <widget class="QStackedWidget" name="stackedWidget_6">
                         <property name="frameShape">
-                         <enum>QFrame::Shape::NoFrame</enum>
+                         <enum>QFrame::NoFrame</enum>
                         </property>
                         <property name="currentIndex">
                          <number>0</number>
@@ -4726,7 +4739,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       <item row="19" column="0" colspan="2">
                        <spacer name="horizontalSpacer_16">
                         <property name="orientation">
-                         <enum>Qt::Orientation::Horizontal</enum>
+                         <enum>Qt::Horizontal</enum>
                         </property>
                         <property name="sizeHint" stdset="0">
                          <size>
@@ -4821,7 +4834,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       <item row="17" column="0" colspan="2">
                        <spacer name="horizontalSpacer_7">
                         <property name="orientation">
-                         <enum>Qt::Orientation::Horizontal</enum>
+                         <enum>Qt::Horizontal</enum>
                         </property>
                         <property name="sizeHint" stdset="0">
                          <size>
@@ -4841,7 +4854,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       <item row="20" column="0" colspan="2">
                        <spacer name="horizontalSpacer_8">
                         <property name="orientation">
-                         <enum>Qt::Orientation::Horizontal</enum>
+                         <enum>Qt::Horizontal</enum>
                         </property>
                         <property name="sizeHint" stdset="0">
                          <size>
@@ -4937,7 +4950,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       <item row="13" column="0" colspan="2">
                        <spacer name="horizontalSpacer_14">
                         <property name="orientation">
-                         <enum>Qt::Orientation::Horizontal</enum>
+                         <enum>Qt::Horizontal</enum>
                         </property>
                         <property name="sizeHint" stdset="0">
                          <size>
@@ -4971,7 +4984,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       <item row="12" column="0" colspan="2">
                        <spacer name="horizontalSpacer_15">
                         <property name="orientation">
-                         <enum>Qt::Orientation::Horizontal</enum>
+                         <enum>Qt::Horizontal</enum>
                         </property>
                         <property name="sizeHint" stdset="0">
                          <size>
@@ -5026,7 +5039,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       <item row="14" column="0" colspan="2">
                        <spacer name="horizontalSpacer_13">
                         <property name="orientation">
-                         <enum>Qt::Orientation::Horizontal</enum>
+                         <enum>Qt::Horizontal</enum>
                         </property>
                         <property name="sizeHint" stdset="0">
                          <size>
@@ -5089,7 +5102,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                       <item row="22" column="0">
                        <spacer name="verticalSpacer_15">
                         <property name="orientation">
-                         <enum>Qt::Orientation::Vertical</enum>
+                         <enum>Qt::Vertical</enum>
                         </property>
                         <property name="sizeHint" stdset="0">
                          <size>
@@ -5267,7 +5280,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="2" column="3">
                    <spacer name="horizontalSpacer_12">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Horizontal</enum>
+                     <enum>Qt::Horizontal</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -5323,7 +5336,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                <item row="1" column="0">
                 <spacer name="horizontalSpacer_9">
                  <property name="orientation">
-                  <enum>Qt::Orientation::Horizontal</enum>
+                  <enum>Qt::Horizontal</enum>
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
@@ -5376,7 +5389,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="0" column="4">
                    <spacer name="horizontalSpacer_11">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Horizontal</enum>
+                     <enum>Qt::Horizontal</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -5402,7 +5415,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="9" column="0">
                    <spacer name="verticalSpacer">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Vertical</enum>
+                     <enum>Qt::Vertical</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -5415,10 +5428,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="0" column="3">
                    <spacer name="horizontalSpacer_28">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Horizontal</enum>
+                     <enum>Qt::Horizontal</enum>
                     </property>
                     <property name="sizeType">
-                     <enum>QSizePolicy::Policy::Expanding</enum>
+                     <enum>QSizePolicy::Expanding</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -5431,7 +5444,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="1" column="3">
                    <spacer name="horizontalSpacer_29">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Horizontal</enum>
+                     <enum>Qt::Horizontal</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -5444,7 +5457,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="1" column="4">
                    <spacer name="horizontalSpacer_30">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Horizontal</enum>
+                     <enum>Qt::Horizontal</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -5655,7 +5668,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="2" column="2" rowspan="2">
                    <spacer name="verticalSpacer_9">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Vertical</enum>
+                     <enum>Qt::Vertical</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -5671,7 +5684,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                <item row="2" column="0">
                 <spacer name="verticalSpacer_13">
                  <property name="orientation">
-                  <enum>Qt::Orientation::Vertical</enum>
+                  <enum>Qt::Vertical</enum>
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
@@ -5889,7 +5902,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                <item row="2" column="1">
                 <spacer name="verticalSpacer_14">
                  <property name="orientation">
-                  <enum>Qt::Orientation::Vertical</enum>
+                  <enum>Qt::Vertical</enum>
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
@@ -5952,7 +5965,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="1" column="1" rowspan="2">
                    <spacer name="verticalSpacer_8">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Vertical</enum>
+                     <enum>Qt::Vertical</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -6087,7 +6100,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                <item row="2" column="0">
                 <spacer name="verticalSpacer_11">
                  <property name="orientation">
-                  <enum>Qt::Orientation::Vertical</enum>
+                  <enum>Qt::Vertical</enum>
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
@@ -6116,7 +6129,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Set how the wind resistance at facades is calculated. &lt;br/&gt;DIN 6946 includes a higher z0 value and is the default.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </property>
                     <property name="alignment">
-                     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                     </property>
                    </widget>
                   </item>
@@ -6229,7 +6242,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If activated, the reference surface temperature / humidity will be calculated accounting only inflow cells.&lt;br/&gt;Otherwise, it will be calculated using the average values of each grid cell.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </property>
                     <property name="alignment">
-                     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                     </property>
                    </widget>
                   </item>
@@ -6252,7 +6265,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="3" column="0">
                    <spacer name="horizontalSpacer_23">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Horizontal</enum>
+                     <enum>Qt::Horizontal</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -6268,7 +6281,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The different models mainly vary in the calculation of the mechanical production term Pm, the deformation of the wind field, and the rotation of the wind fields.&lt;br/&gt;&lt;/p&gt;&lt;p&gt;For further information, you can read the corresponding papers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </property>
                     <property name="alignment">
-                     <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                     </property>
                    </widget>
                   </item>
@@ -6302,7 +6315,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                   <item row="5" column="0">
                    <spacer name="verticalSpacer_12">
                     <property name="orientation">
-                     <enum>Qt::Orientation::Vertical</enum>
+                     <enum>Qt::Vertical</enum>
                     </property>
                     <property name="sizeHint" stdset="0">
                      <size>
@@ -6485,7 +6498,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
            <item row="2" column="0">
             <spacer name="verticalSpacer_24">
              <property name="orientation">
-              <enum>Qt::Orientation::Vertical</enum>
+              <enum>Qt::Vertical</enum>
              </property>
              <property name="sizeHint" stdset="0">
               <size>
@@ -6531,10 +6544,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
                 <item>
                  <spacer name="horizontalSpacer_31">
                   <property name="orientation">
-                   <enum>Qt::Orientation::Horizontal</enum>
+                   <enum>Qt::Horizontal</enum>
                   </property>
                   <property name="sizeType">
-                   <enum>QSizePolicy::Policy::Minimum</enum>
+                   <enum>QSizePolicy::Minimum</enum>
                   </property>
                   <property name="sizeHint" stdset="0">
                    <size>
@@ -6595,7 +6608,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                  </size>
                 </property>
                 <property name="horizontalScrollBarPolicy">
-                 <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+                 <enum>Qt::ScrollBarAlwaysOff</enum>
                 </property>
                </widget>
               </item>
@@ -6679,7 +6692,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                 <item>
                  <spacer name="horizontalSpacer_34">
                   <property name="orientation">
-                   <enum>Qt::Orientation::Horizontal</enum>
+                   <enum>Qt::Horizontal</enum>
                   </property>
                   <property name="sizeHint" stdset="0">
                    <size>
@@ -6706,7 +6719,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                 <item>
                  <spacer name="horizontalSpacer_35">
                   <property name="orientation">
-                   <enum>Qt::Orientation::Horizontal</enum>
+                   <enum>Qt::Horizontal</enum>
                   </property>
                   <property name="sizeHint" stdset="0">
                    <size>
@@ -6757,7 +6770,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
                 <item row="1" column="2">
                  <spacer name="horizontalSpacer_27">
                   <property name="orientation">
-                   <enum>Qt::Orientation::Horizontal</enum>
+                   <enum>Qt::Horizontal</enum>
                   </property>
                   <property name="sizeHint" stdset="0">
                    <size>
@@ -6823,7 +6836,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
            <item row="5" column="0" colspan="4">
             <widget class="Line" name="line_4">
              <property name="orientation">
-              <enum>Qt::Orientation::Horizontal</enum>
+              <enum>Qt::Horizontal</enum>
              </property>
             </widget>
            </item>
@@ -6851,6 +6864,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
             <widget class="QLabel" name="label_40">
              <property name="font">
               <font>
+               <weight>75</weight>
                <bold>true</bold>
               </font>
              </property>

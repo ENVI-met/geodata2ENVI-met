@@ -22,3 +22,15 @@ C_COLOR_SCALE_CUSTOM_PATH = ''
 C_SAMPLING_METHOD = 1
 
 C_TERRAIN_ID = 2
+
+# Cross-version Qt field-type constants for QgsField.
+# QGIS 3 / PyQt5: QVariant.Type.X is available.
+# QGIS 4 / PyQt6: QVariant.Type does not exist; QgsField expects QMetaType.Type.X.
+try:
+    from qgis.PyQt.QtCore import QVariant as _QVariant
+    FIELD_TYPE_INT = _QVariant.Type.Int
+    FIELD_TYPE_STRING = _QVariant.Type.String
+except (AttributeError, ImportError):
+    from qgis.PyQt.QtCore import QMetaType as _QMetaType
+    FIELD_TYPE_INT = _QMetaType.Type.Int
+    FIELD_TYPE_STRING = _QMetaType.Type.QString
