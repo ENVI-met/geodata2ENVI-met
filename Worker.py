@@ -2,7 +2,7 @@ import math
 import sys
 import json
 import time
-from math import degrees, floor, trunc
+from math import degrees, floor
 
 import numpy as np
 import requests
@@ -13,7 +13,7 @@ from osgeo import gdal, osr
 from qgis.PyQt.QtCore import Qt, QObject, QDate, QTime, pyqtSignal
 from qgis.core import (QgsProject, Qgis, QgsField, QgsPoint, QgsPointXY, QgsVectorLayer, QgsRectangle,
                        QgsFeatureRequest, QgsMessageLog, QgsRasterLayer, QgsGeometry, QgsFeature,
-                       QgsCoordinateReferenceSystem, QgsRasterBlock, QgsRasterBandStats, QgsProcessing,
+                       QgsRasterBlock, QgsRasterBandStats, QgsProcessing,
                        QgsRasterShader, QgsColorRampShader,
                        QgsSingleBandPseudoColorRenderer, QgsStyle, QgsRasterRendererUtils)
 # QgsGeometryUtils.angleBetweenThreePoints() is deprecated from QGIS 3.40 on;
@@ -34,6 +34,7 @@ from .Const_defines import (C_NODATA_VALUE, C_SAMPLING_METHOD,
                             C_COLOR_SCALE_CUSTOM_PATH,
                             C_VECTORLAYER_TYPE_POINT, C_VECTORLAYER_TYPE_POLYGON,
                             FIELD_TYPE_INT, FIELD_TYPE_STRING)
+from .worker_helpers import get_UTM_zone, getQGIS_crs
 
 
 class Building:
@@ -217,6 +218,9 @@ class Worker(QObject):
         # Set the printoptions to maximum to print whole arrays of all following print functions
         np.set_printoptions(threshold=sys.maxsize)
 
+    # ==================================================================
+    # Geometry, rotation and processing helpers
+    # ==================================================================
     def rotate_layer(self, lay: QgsVectorLayer, is_sub_area_layer: bool):
         if (lay is None) or (lay.name() == "notAvail"):
             return ""
@@ -468,6 +472,9 @@ class Worker(QObject):
                 # write a msg to the user
                 self.msg = 'Error:Please provide a layer featuring a single rectangular polygon (4 vertices). The use of the "Shape Digitizing Toolbar" is recommended.'
 
+    # ==================================================================
+    # Location, elevation and CRS lookups (online)
+    # ==================================================================
     def get_time_zone_geonames(self):
         QgsMessageLog.logMessage("Getting Timezone...", 'ENVI-met', level=Qgis.MessageLevel.Info)
         try:
@@ -500,16 +507,6 @@ class Worker(QObject):
         except Exception:
             return self.refHeightDEM
 
-    def get_UTM_zone(self, lon: int, lat: int):
-        zoneNum = trunc((floor(lon + 180) / 6) + 1)
-        zoneHemi = "N"
-        if lat >= 0:
-            zoneHemi = "N"
-        else:
-            zoneHemi = "S"
-        res = str(zoneNum) + ' ' + zoneHemi
-        return res
-
     def find_crs_auth_id(self, crs_description: str) -> int:
         """
         Gets the auth_id from a CRS description.
@@ -527,6 +524,9 @@ class Worker(QObject):
 
         return int(result[0]) if len(result) else -1
 
+    # ==================================================================
+    # Gridding: buildings
+    # ==================================================================
     def buildBInfo(self):
         self.s_buildingDict.clear()
         if (self.bLayer.name() == "notAvail") or ((not self.bTop_UseCustom) and (self.bTop == "")) or (self.bLayer.getFeatures() is None):
@@ -666,6 +666,9 @@ class Worker(QObject):
         QgsMessageLog.logMessage("Finished: Gridding Building Bottoms.", 'ENVI-met', level=Qgis.MessageLevel.Info)
         return grid1_int_array
 
+    # ==================================================================
+    # Gridding: surfaces and raster processing
+    # ==================================================================
     def raster_surface_from_vector(self):
         if self.surfLayer.name() == "notAvail":
             tmpAr = np.empty(shape=(self.JJ, self.II), dtype='<U6')
@@ -1112,6 +1115,9 @@ class Worker(QObject):
 
         return grid1_str_array
 
+    # ==================================================================
+    # Grid conforming and rasterization helpers
+    # ==================================================================
     def reorgFID(self, input_layer):
         # some users report that (understandably) if the fID is identical for all features, then the rasterizer does not work
         # thus first we check if there is a field called "fid"
@@ -1183,6 +1189,9 @@ class Worker(QObject):
             return grid1_int_array.astype(str), grid1_int_array
         return grid1_int_array
 
+    # ==================================================================
+    # Gridding: vegetation
+    # ==================================================================
     def raster_simple_plants_from_vector(self):
         if self.plant1dLayer.name() == "notAvail":
             tmpAr = np.zeros(shape=(self.JJ, self.II), dtype='<U6')
@@ -1336,6 +1345,9 @@ class Worker(QObject):
         QgsMessageLog.logMessage("Finished: Gridding 3D Plants.", 'ENVI-met', level=Qgis.MessageLevel.Info)
         return self.s_treeList
 
+    # ==================================================================
+    # Terrain / DEM
+    # ==================================================================
     def getDEM(self, interpolate: int = 1):
         # Get non-rotated subArea extent for clipping the warp
         spFeats = self.subAreaLayer_nonRot.getFeatures()
@@ -1437,6 +1449,9 @@ class Worker(QObject):
 
         return grid1_float.astype(int)
 
+    # ==================================================================
+    # Gridding: sources
+    # ==================================================================
     def rasterSrcP(self):
         if self.srcPLayer.name() == "notAvail":
             tmpAr = np.zeros(shape=(self.JJ, self.II), dtype='<U6')
@@ -1645,6 +1660,9 @@ class Worker(QObject):
         QgsMessageLog.logMessage("Finished: Gridding Sources (Areas).", 'ENVI-met', level=Qgis.MessageLevel.Info)
         return grid1_str_array
 
+    # ==================================================================
+    # Gridding: receptors
+    # ==================================================================
     def buildReceptors(self):
         self.s_recList.clear()
         if self.recLayer.name() == "notAvail":
@@ -1725,6 +1743,9 @@ class Worker(QObject):
         QgsMessageLog.logMessage("Finished: Gridding Receptors.", 'ENVI-met', level=Qgis.MessageLevel.Info)
         return self.s_recList
 
+    # ==================================================================
+    # Reprojection helpers
+    # ==================================================================
     def reprojectLayerToUTM(self, aLayer, isSubAreaLayer: bool):
         # print(aLayer.crs().authid().split(":")[1])
         if not (aLayer.crs().authid().split(":")[1] == str(4326)):
@@ -1743,7 +1764,7 @@ class Worker(QObject):
                 lon = centroid.x()
                 lat = centroid.y()
                 # print(f"Centroid - Longitude: {lon}, Latitude: {lat}")
-        aUTMZone = self.get_UTM_zone(lon, lat)
+        aUTMZone = get_UTM_zone(lon, lat)
         # print(aUTMZone)
         auth_id = self.find_crs_auth_id("WGS 84 / UTM zone " + aUTMZone.replace(' ', ''))
         # print(auth_id)
@@ -1767,7 +1788,7 @@ class Worker(QObject):
         proj = pyproj.Transformer.from_crs(aLayer.crs().authid(), 4326, always_xy=True)
         x1, y1 = (aLayer.extent().xMinimum(), aLayer.extent().yMinimum())
         lon, lat = proj.transform(x1, y1)
-        aUTMZone = self.get_UTM_zone(lon, lat)
+        aUTMZone = get_UTM_zone(lon, lat)
         # print(aUTMZone)
         auth_id = self.find_crs_auth_id("WGS 84 / UTM zone " + aUTMZone.replace(' ', ''))
         # print(auth_id)
@@ -1789,6 +1810,9 @@ class Worker(QObject):
         # print(reshaped['OUTPUT'])
         return reshaped['OUTPUT']
 
+    # ==================================================================
+    # INX export
+    # ==================================================================
     def saveINX(self):
         QgsMessageLog.logMessage("--- Started Exporting INX-File ---", 'ENVI-met', level=Qgis.MessageLevel.Info)
 
@@ -1813,7 +1837,7 @@ class Worker(QObject):
 
         self.lon = lon
         self.lat = lat
-        self.UTMZone = self.get_UTM_zone(lon, lat)
+        self.UTMZone = get_UTM_zone(lon, lat)
 
         auth_id = self.find_crs_auth_id("WGS 84 / UTM zone " + self.UTMZone.replace(' ',''))
         print(auth_id)
@@ -2266,6 +2290,9 @@ class Worker(QObject):
         self.progress.emit(100)
         QgsMessageLog.logMessage("--- Finished Exporting INX-File ---", 'ENVI-met', level=Qgis.MessageLevel.Info)
 
+    # ==================================================================
+    # Vertical extent and grid preview
+    # ==================================================================
     def calc_vert_ext(self):
         if self.subAreaLayer.name() == "notAvail":
             return
@@ -2395,6 +2422,9 @@ class Worker(QObject):
             self.zLvl_center[k] = self.zLvl_bot[k] + 0.5 * self.dzAr[k]
         self.finished.emit()
 
+    # ==================================================================
+    # Worker lifecycle
+    # ==================================================================
     def run_save_inx(self):
         self.progress.emit(0)
         t1 = time.time()
@@ -2409,6 +2439,9 @@ class Worker(QObject):
 
     # ENVI-met stores temperatures in Kelvin; the UI works in degrees Celsius.
     # The 273.14999 offset is kept exactly as the original code used it.
+    # ==================================================================
+    # SIMX (simulation config) load/save
+    # ==================================================================
     @staticmethod
     def _k_to_c(kelvin):
         return kelvin - 273.14999
@@ -3005,6 +3038,9 @@ class Worker(QObject):
 
         self.finished.emit()
 
+    # ==================================================================
+    # Data-series comparison and map output
+    # ==================================================================
     def add_layers_to_map(self):
         self.progress.emit(0)
         count = 0
@@ -3058,8 +3094,8 @@ class Worker(QObject):
         tstpB = merged.timestepB
         targetResA = min(min(tstpA.spacing_x[len(tstpA.spacing_x) // 2], tstpA.spacing_y[len(tstpA.spacing_y) // 2]), 1.00)
         targetResB = min(min(tstpB.spacing_x[len(tstpB.spacing_x) // 2], tstpB.spacing_y[len(tstpB.spacing_y) // 2]), 1.00)
-        crs, qgs_crsA = self.getQGIS_crs(tstpA)
-        crs, qgs_crsB = self.getQGIS_crs(tstpB)
+        crs, qgs_crsA = getQGIS_crs(tstpA)
+        crs, qgs_crsB = getQGIS_crs(tstpB)
         if (targetResA != targetResB) or (qgs_crsA != qgs_crsB):
             targetRes = min(targetResA, targetResB)
 
@@ -3204,7 +3240,7 @@ class Worker(QObject):
         extent.setYMinimum(tstp.location_georef_y)
         extent.setXMaximum(tstp.location_georef_x + cols * tstp.spacing_x[len(tstp.spacing_x) // 2])
         extent.setYMaximum(tstp.location_georef_y + rows * tstp.spacing_y[len(tstp.spacing_y) // 2])
-        crs, qgs_crs = self.getQGIS_crs(tstp)
+        crs, qgs_crs = getQGIS_crs(tstp)
         # create and define the context for QGIS- and GDAL-functions
         context = self.get_safe_processing_context()
 
@@ -3382,15 +3418,9 @@ class Worker(QObject):
         else:
             return None
 
-    @staticmethod
-    def getQGIS_crs(tstp: timestep):
-        if tstp.location_georef_lat >= 0:
-            crs = pyproj.CRS.from_string(f'+proj=utm +zone={tstp.location_georef_xy_utmzone} +north')
-        else:
-            crs = pyproj.CRS.from_string(f'+proj=utm +zone={tstp.location_georef_xy_utmzone} +south')
-        qgs_crs = QgsCoordinateReferenceSystem(f'EPSG:{crs.to_authority()[1]}')
-        return crs, qgs_crs
-
+    # ==================================================================
+    # Processing utilities
+    # ==================================================================
     def get_safe_processing_context(self):
         """Creates a processing context compatible with both QGIS 3.4 and QGIS 3.40+"""
         context = dataobjects.createContext()
